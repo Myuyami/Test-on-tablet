@@ -14,19 +14,23 @@
   <button onclick="calculate()">=</button>
 <div>  
 <script>
-  let screen = document.getElementById('display');
-
-  function addNumber(Character) {
-  	screen.value += character;
+  function addNumber(character) {
+  	let currentScreen = document.getElementById('display');
+  	currentScreen.value = currentScreen.value + character;
   }
   function clearScreen() {
-  	screen.value = "";
+  	document.getElementById('display').value = "";
   }
   function calculate() {
+  	let currentScreen = document.getElementById('display');
   	try {
-  		screen.value =eval(screen.value);
+  		currentScreen.value = eval(currentScreen.value);
+  	} catch (error) {
+  		currentScreen.value = "Error";
   	}
   }
+  	
+  
 </script>
 
  </body>
