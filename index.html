@@ -1,0 +1,33 @@
+<html> 
+<body>
+  <title>My First Calculator</title>
+ </head>
+ <body>
+
+<input type="text" id="display" readonly>
+<div>
+  <button onclick="addNumber('7')">7</button>
+  <button onclick="addNumber('8')">8</button>
+  <button onclick="addNumber('9')">9</button>
+  <button onclick="addNumber('+')">+</button>
+  <button onclick="clearScreen()">C</button>
+  <button onclick="calculate()">=</button>
+<div>  
+<script>
+  let screen = document.getElementById('display');
+
+  function addNumber(Character) {
+  	screen.value += character;
+  }
+  function clearScreen() {
+  	screen.value = "";
+  }
+  function calculate() {
+  	try {
+  		screen.value =eval(screen.value);
+  	}
+  }
+</script>
+
+ </body>
+ </html>
